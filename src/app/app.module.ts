@@ -1,13 +1,24 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { HelloComponent } from './hello.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { SampleEditorComponent } from './sample-editor/sample-editor.component';
+import { Cmp1Component } from './cmp1/cmp1.component';
+import { Cmp2Component } from './cmp2/cmp2.component';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [
+    AppComponent,
+    SampleEditorComponent,
+    Cmp1Component,
+    Cmp2Component
+  ],
+    imports: [
+        BrowserModule,
+        ReactiveFormsModule
+    ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

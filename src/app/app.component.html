@@ -1,4 +1,5 @@
-<hello name="{{ name }}"></hello>
-<p>
-  Start editing to see some magic happen :)
-</p>
+<form [formGroup]="form">
+  <pre>{{ form.value | json }}</pre>
+  <input type="text" formControlName="name">
+  <app-sample-editor [form]="form" [source]="form.get('name').value"></app-sample-editor>
+</form>
