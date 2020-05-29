@@ -8,7 +8,7 @@ import {Cmp1Component} from '../cmp1/cmp1.component';
   templateUrl: './sample-editor.component.html'
 })
 export class SampleEditorComponent {
-  @ViewChild('vc', { read: ViewContainerRef }) vc;
+  @ViewChild('vc', { read: ViewContainerRef, static: true }) vc;
   @Input() form: FormGroup;
   @Input() set source(value: string) {
     this.loadComponent(value);
